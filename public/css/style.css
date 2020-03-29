@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.body,
+.wrapper {
+  /* Break the flow */
+  position: absolute;
+  top: 0px;
+
+  /* Give them all the available space */
+  width: 100%;
+  height: 100%;
+
+  /* Remove the margins if any */
+  margin: 0;
+
+  /* Allow them to scroll down the document */
+  overflow-y: hidden;
+}
+
+html {
+  background-color: #000;
+}
+
+.body {
+  /* Sending body at the bottom of the stack */
+  z-index: 1;
+  background-color: #000;
+}
+
+.wrapper {
+  /* Making the wrapper stack above the body */
+  z-index: 2;
+  background-color: #000;
+}
+
+#app-title {
+  text-align: center;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: lighter;
+  margin: 5rem auto 7rem auto;
+  user-select: none;
+}
+
+#main-canvas {
+  display: block;
+  max-width: 700px;
+  margin: 0 auto;
+  border: 1px solid #fff;
+}
+
+#beep-sound {
+  display: none;
+}
